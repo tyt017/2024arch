@@ -1,2 +1,2 @@
-# 2024arch
-2024 Computer Architecture HW
+# 2024 Computer Architecture HW
+
