@@ -21,7 +21,7 @@ out_my_clz:
     li t1, 32
     sub t1, t1, a0
     add t2, x0, t1 # loop counter for L-1 zeros
-    addi t3, t1, -1 # the MSB of the input
+    addi t3, t1, -1
     add t5, t1, x0 # loop counter for output_binary
 output:
     addi t2, t2, -1
@@ -33,7 +33,7 @@ output_zero: # print 0
     ecall
     j output
 output_binary:
-    srl t4, t0, t3
+    srl t4, t0, t3 # shift to the MSB
     andi t1, t4, 1
     addi t3, t3, -1
     addi t5, t5, -1
