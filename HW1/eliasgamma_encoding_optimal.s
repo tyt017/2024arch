@@ -42,7 +42,7 @@ my_clz:
     add a0, x0, t4 # put the result into a0
 out_my_clz:
     add t2, x0, a0 # loop counter for L-1 zeros
-    addi t3, a0, -1 # the MSB of the input
+    addi t3, a0, -1
     addi t5, a0, 0 # loop counter for output_binary
 output:
     addi t2, t2, -1
@@ -54,7 +54,7 @@ output_zero:
     ecall
     j output
 output_binary:
-    srl t4, t0, t3
+    srl t4, t0, t3 # shift to the MSB
     andi t1, t4, 1
     addi t3, t3, -1
     addi t5, t5, -1
